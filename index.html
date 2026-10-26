@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabian Salman Al-Hafiz | Portofolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Konfigurasi Tailwind untuk Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-900 text-white antialiased">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tight">
+                        Fabian<span class="text-sky-400">.dev</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 px-3 py-2 rounded-md font-medium">Tentang Saya</a>
+                        <a href="#skills" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 px-3 py-2 rounded-md font-medium">Keahlian</a>
+                        <a href="#contact" class="text-gray-300 hover:text-sky-400 transition-colors duration-300 px-3 py-2 rounded-md font-medium">Kontak</a>
+                    </div>
+                </div>
+                
+                <!-- CTA Button Desktop -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-orange-500/30">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none transition-colors">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-gray-900 border-t border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:text-sky-400 hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium">Tentang Saya</a>
+                <a href="#skills" class="text-gray-300 hover:text-sky-400 hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium">Keahlian</a>
+                <a href="#contact" class="text-gray-300 hover:text-sky-400 hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium">Kontak</a>
+                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white block px-3 py-2 rounded-md text-base font-bold mt-4 text-center">Hubungi Saya</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden relative">
+        <!-- Background Glow Effect -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-sky-500/10 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                
+                <!-- Text Content (Kiri) -->
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+                        Membangun Solusi Digital yang <span class="text-sky-400">Efisien, Terstruktur, dan Berdampak.</span>
+                    </h1>
+                    <p class="mt-4 text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Halo, saya <strong class="text-white">Fabian Salman Al-Hafiz</strong>. Mahasiswa Sistem Informasi di Universitas Komputama yang berfokus pada analisis sistem, pengolahan data, dan pengembangan teknologi web untuk memecahkan masalah nyata.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3.5 rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-orange-500/30 text-center">
+                            Mari Berkolaborasi
+                        </a>
+                        <a href="#skills" class="border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-gray-900 px-8 py-3.5 rounded-lg font-semibold transition-all duration-300 text-center">
+                            Lihat Keahlian
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Content (Kanan) -->
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <!-- Container putih untuk memisahkan foto background merah dengan tema gelap -->
+                    <div class="bg-white p-3 rounded-3xl shadow-2xl shadow-sky-500/20 border-4 border-sky-400 transform hover:scale-105 transition-transform duration-500">
+                        <!-- GANTI URL DI BAWAH INI DENGAN LINK FOTO ANDA -->
+                        <img src="picture.jpeg" alt="Foto Fabian Salman Al-Hafiz" class="w-64 h-80 sm:w-80 sm:h-[400px] object-cover rounded-2xl">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="py-20 bg-gray-50 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold inline-block border-b-4 border-orange-500 pb-2">Tentang Saya</h2>
+            </div>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed text-center sm:text-left">
+                <p>
+                    Saya adalah mahasiswa Sistem Informasi Universitas Komputama yang memiliki ketertarikan mendalam pada dunia teknologi dan perancangan sistem. Bagi saya, teknologi bukan hanya soal menulis kode, tetapi bagaimana membangun solusi digital yang efisien, terstruktur, dan bermanfaat bagi penggunanya.
+                </p>
+                <p>
+                    Saat ini, saya aktif mempelajari alur pengembangan perangkat lunak, perancangan basis data, serta analisis kebutuhan sistem. Saya selalu terbuka untuk kolaborasi, proyek baru, dan kesempatan belajar untuk mengasah kemampuan teknis maupun analisis saya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Keahlian & Fokus Area</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Kombinasi kemampuan analisis dan teknis untuk menghasilkan solusi digital yang optimal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-gray-800 rounded-xl p-8 border-t-4 border-sky-400 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-400/10 transition-all duration-300">
+                    <div class="w-14 h-14 bg-gray-700 rounded-lg flex items-center justify-center mb-6">
+                        <!-- Icon Flowchart/Analysis -->
+                        <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Analisis & Perancangan Sistem</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Merancang alur sistem, diagram proses (UML/Flowchart), dan memetakan kebutuhan bisnis ke dalam solusi teknis yang tepat sasaran.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-800 rounded-xl p-8 border-t-4 border-orange-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300">
+                    <div class="w-14 h-14 bg-gray-700 rounded-lg flex items-center justify-center mb-6">
+                        <!-- Icon Code/Web -->
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Pengembangan Web</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Membangun antarmuka web yang responsif dan ramah pengguna menggunakan teknologi web modern untuk pengalaman pengguna yang optimal.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-800 rounded-xl p-8 border-t-4 border-sky-400 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-400/10 transition-all duration-300">
+                    <div class="w-14 h-14 bg-gray-700 rounded-lg flex items-center justify-center mb-6">
+                        <!-- Icon Database -->
+                        <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Manajemen & Pengolahan Data</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Merancang dan mengelola struktur basis data (database) yang aman serta efisien untuk mendukung kebutuhan operasional sistem.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-sky-400 to-sky-600 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-gray-900">
+                Mari Ciptakan Sesuatu yang Hebat Bersama!
+            </h2>
+            <p class="text-lg md:text-xl text-sky-900 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+                Saya selalu tertarik untuk berdiskusi tentang teknologi, proyek sistem informasi, atau peluang kerja sama. Apakah Anda memiliki ide proyek, membutuhkan analisis sistem, atau ingin berdiskusi seputar pengembangan web? Jangan ragu untuk menghubungi saya!
+            </p>
+            
+            <a href="mailto:abiannn121@gmail.com" class="inline-block text-xl md:text-2xl font-bold underline decoration-orange-500 decoration-4 underline-offset-8 hover:text-white transition-colors duration-300 mb-10">
+                abiannn121@gmail.com
+            </a>
+            
+            <div>
+                <a href="mailto:abiannn121@gmail.com" class="inline-block bg-gray-900 text-white hover:bg-orange-500 hover:text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/50 transform hover:-translate-y-1">
+                    Kirim Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; 2024 Fabian Salman Al-Hafiz. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================= SCRIPT UNTUK MOBILE MENU ================= -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Menutup menu saat link diklik
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
